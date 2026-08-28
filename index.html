@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Embroidery Design Assistant</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .menu {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111827, #374151);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      opacity: 0.85;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.2s;
+      cursor: pointer;
+      border: 1px solid #e5e7eb;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .assistant {
+      margin-top: 45px;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .assistant h2 {
+      margin-bottom: 10px;
+    }
+
+    .assistant p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    .button:hover {
+      background: #374151;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero {
+        padding: 40px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🧵 Embroidery Assistant</div>
+    <div class="menu">Professional Embroidery Tools</div>
+  </header>
+
+  <section class="hero">
+    <h1>Embroidery Design Assistant</h1>
+
+    <p>
+      A professional web-based assistant for embroidery designers.
+      Calculate, analyze and manage your embroidery design workflow easily.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <div class="section-title">
+      <h2>Embroidery Tools</h2>
+      <p>Choose a tool to get started</p>
+    </div>
+
+    <div class="tools">
+
+      <div class="card">
+        <div class="icon">🧵</div>
+        <h3>Embroidery Design Assistant</h3>
+        <p>Assist with embroidery design planning and technical information.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📐</div>
+        <h3>Design Size Calculator</h3>
+        <p>Calculate embroidery design dimensions and proportions.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔢</div>
+        <h3>Stitch Calculator</h3>
+        <p>Estimate stitch count based on design size and density.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Thread Color</h3>
+        <p>Find and manage embroidery thread colors and color information.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✨</div>
+        <h3>Embroidery Effect</h3>
+        <p>Create realistic embroidery-style visual effects for artwork.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✂️</div>
+        <h3>Applique</h3>
+        <p>Applique design planning and embroidery technique information.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔘</div>
+        <h3>Sequin</h3>
+        <p>Sequin types, spacing and embroidery technique information.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💎</div>
+        <h3>Beads</h3>
+        <p>Beads embroidery technique and design information.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔄</div>
+        <h3>File Formats</h3>
+        <p>Information about EMB, DST, DHP and other embroidery formats.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Embroidery Knowledge</h3>
+        <p>Learn embroidery techniques, settings and professional tips.</p>
+      </div>
+
+    </div>
+
+    <div class="assistant">
+      <h2>🧠 AI Embroidery Assistant</h2>
+
+      <p>
+        Your future smart assistant for embroidery design questions,
+        techniques and calculations.
+      </p>
+
+      <button class="button" onclick="startAssistant()">
+        Start Assistant
+      </button>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Embroidery Design Assistant
+  </footer>
+
+  <script>
+    function startAssistant() {
+      alert(
+        "Embroidery Design Assistant is ready!\\n\\nAI features will be added in the next version."
+      );
+    }
+  </script>
+
+</body>
+  </html>
