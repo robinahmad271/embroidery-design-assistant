@@ -3,10 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional Embroidery Design Assistant">
+
+<meta name="description"
+content="Professional Embroidery Design Assistant - Tools, Training, Calculators and AI Assistant">
+
 <title>Embroidery Design Assistant</title>
 
 <style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 *{
     margin:0;
     padding:0;
@@ -14,12 +22,30 @@
     font-family:Arial,Helvetica,sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#f5f7fb;
     color:#101b3d;
 }
 
-/* ================= SIDEBAR ================= */
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
 
 .sidebar{
     position:fixed;
@@ -32,6 +58,7 @@ body{
     padding:20px 16px;
     overflow-y:auto;
     z-index:1000;
+    transition:.3s;
 }
 
 .logo{
@@ -132,14 +159,27 @@ body{
     height:17px;
     background:white;
     border-radius:50%;
+    transition:.3s;
 }
 
-/* ================= MAIN ================= */
+.switch.active .switch-dot{
+    transform:translateX(19px);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
 
 .main{
     margin-left:275px;
     min-height:100vh;
 }
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
 
 .topbar{
     height:80px;
@@ -149,6 +189,9 @@ body{
     padding:0 35px;
     gap:25px;
     border-bottom:1px solid #e7ebf2;
+    position:sticky;
+    top:0;
+    z-index:500;
 }
 
 .mobile-menu{
@@ -166,6 +209,7 @@ body{
     align-items:center;
     padding:0 15px;
     gap:10px;
+    background:white;
 }
 
 .search input{
@@ -218,7 +262,10 @@ body{
     color:#71809b;
 }
 
-/* ================= CONTENT ================= */
+
+/* =========================================================
+   CONTENT
+========================================================= */
 
 .content{
     padding:28px 38px;
@@ -287,7 +334,10 @@ body{
     font-size:12px;
 }
 
-/* ================= TOOLS ================= */
+
+/* =========================================================
+   TOOLS
+========================================================= */
 
 .tools-container{
     background:white;
@@ -364,61 +414,10 @@ body{
     line-height:1.5;
 }
 
-/* ================= EXTRA CARDS ================= */
 
-.extra-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-    margin-top:18px;
-}
-
-.extra-card{
-    background:white;
-    border:1px solid #e5eaf2;
-    border-radius:16px;
-    padding:22px;
-    cursor:pointer;
-    transition:.25s;
-}
-
-.extra-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 25px rgba(30,50,90,.10);
-}
-
-.extra-icon{
-    width:52px;
-    height:52px;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:25px;
-    color:white;
-    margin-bottom:14px;
-}
-
-.training-icon{
-    background:#7042db;
-}
-
-.contact-icon{
-    background:#11aa58;
-}
-
-.extra-card h3{
-    font-size:17px;
-    margin-bottom:8px;
-}
-
-.extra-card p{
-    color:#66738c;
-    font-size:13px;
-    line-height:1.6;
-}
-
-/* ================= LOWER ================= */
+/* =========================================================
+   LOWER SECTION
+========================================================= */
 
 .lower{
     display:grid;
@@ -444,7 +443,7 @@ body{
     border:1px solid #dce3ee;
     border-radius:10px;
     height:48px;
-    padding:0 15px;
+    padding:0 8px 0 15px;
     display:flex;
     align-items:center;
 }
@@ -461,7 +460,6 @@ body{
     color:white;
     padding:10px 15px;
     border-radius:8px;
-    cursor:pointer;
 }
 
 .quick-buttons{
@@ -480,7 +478,10 @@ body{
     cursor:pointer;
 }
 
-/* ================= RECENT ================= */
+
+/* =========================================================
+   RECENT DESIGNS
+========================================================= */
 
 .recent{
     display:grid;
@@ -517,7 +518,10 @@ body{
     margin-top:5px;
 }
 
-/* ================= BOTTOM STATS ================= */
+
+/* =========================================================
+   BOTTOM STATS
+========================================================= */
 
 .bottom-stats{
     margin-top:18px;
@@ -547,16 +551,201 @@ body{
     margin-top:5px;
 }
 
-/* ================= FOOTER ================= */
+
+/* =========================================================
+   TRAINING
+========================================================= */
+
+.training-section{
+    margin-top:22px;
+}
+
+.section-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.section-heading h2{
+    font-size:21px;
+}
+
+.section-heading p{
+    color:#71809a;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.training-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.training-card{
+    background:white;
+    border:1px solid #e5eaf2;
+    border-radius:15px;
+    padding:20px;
+    transition:.25s;
+}
+
+.training-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px rgba(30,50,90,.10);
+}
+
+.training-icon{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    background:#e8f4ff;
+    margin-bottom:14px;
+}
+
+.training-card:nth-child(2) .training-icon{
+    background:#e9f9ef;
+}
+
+.training-card:nth-child(3) .training-icon{
+    background:#fff2e7;
+}
+
+.training-card h3{
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.training-card p{
+    color:#697791;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.training-btn{
+    margin-top:15px;
+    border:0;
+    background:#287bf2;
+    color:white;
+    padding:9px 14px;
+    border-radius:8px;
+    font-size:12px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section{
+    margin-top:22px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:18px;
+}
+
+.contact-info{
+    background:#061a35;
+    color:white;
+    border-radius:16px;
+    padding:25px;
+}
+
+.contact-info h2{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.contact-info p{
+    color:#b8c5d9;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.contact-item{
+    margin-top:20px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.contact-item-icon{
+    width:40px;
+    height:40px;
+    background:#102e55;
+    border-radius:9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-form{
+    background:white;
+    border:1px solid #e5eaf2;
+    border-radius:16px;
+    padding:25px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.contact-form label{
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    border:1px solid #dce3ee;
+    border-radius:9px;
+    padding:12px;
+    outline:none;
+    margin-bottom:15px;
+}
+
+.contact-form textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.contact-submit{
+    background:#287bf2;
+    color:white;
+    border:0;
+    padding:12px 20px;
+    border-radius:9px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
     text-align:center;
-    padding:25px;
+    padding:30px 20px;
     color:#8290a7;
     font-size:12px;
 }
 
-/* ================= MODAL ================= */
+
+/* =========================================================
+   MODAL
+========================================================= */
 
 .modal{
     position:fixed;
@@ -569,9 +758,13 @@ footer{
     padding:20px;
 }
 
+.modal.show{
+    display:flex;
+}
+
 .modal-box{
     background:white;
-    width:550px;
+    width:560px;
     max-width:100%;
     max-height:90vh;
     overflow-y:auto;
@@ -589,6 +782,14 @@ footer{
 .close{
     cursor:pointer;
     font-size:25px;
+    color:#66738c;
+}
+
+.modal-description{
+    color:#65738d;
+    font-size:13px;
+    line-height:1.7;
+    margin-bottom:20px;
 }
 
 .modal-box input,
@@ -602,48 +803,82 @@ footer{
     outline:none;
 }
 
-.modal-box textarea{
-    min-height:110px;
-    resize:vertical;
-}
-
 .modal-action{
     background:#287bf2;
     color:white;
     border:0;
     padding:12px 20px;
     border-radius:8px;
-    cursor:pointer;
 }
 
-.training-list{
-    display:grid;
-    gap:10px;
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark{
+    background:#0c1424;
+    color:#edf3ff;
 }
 
-.training-item{
-    border:1px solid #e2e7ef;
-    border-radius:10px;
-    padding:13px;
-    cursor:pointer;
-    transition:.2s;
+body.dark .topbar,
+body.dark .panel,
+body.dark .tools-container,
+body.dark .stat,
+body.dark .bottom-stats,
+body.dark .training-card,
+body.dark .contact-form{
+    background:#111d31;
+    border-color:#253550;
 }
 
-.training-item:hover{
-    background:#f4f7fc;
+body.dark .search{
+    background:#111d31;
+    border-color:#30405b;
 }
 
-.training-item strong{
-    display:block;
-    margin-bottom:5px;
+body.dark .search input,
+body.dark .ai-input input{
+    background:transparent;
+    color:white;
 }
 
-.training-item span{
-    font-size:12px;
-    color:#71809b;
+body.dark .ai-input{
+    border-color:#30405b;
 }
 
-/* ================= MOBILE ================= */
+body.dark .tool p,
+body.dark .welcome p,
+body.dark .panel p,
+body.dark .training-card p{
+    color:#aab8ce;
+}
+
+body.dark .design-preview{
+    background:#18253a;
+}
+
+body.dark .design-card{
+    border-color:#30405b;
+}
+
+body.dark .modal-box{
+    background:#111d31;
+    color:white;
+}
+
+body.dark .modal-box input,
+body.dark .modal-box textarea,
+body.dark .modal-box select{
+    background:#18253a;
+    color:white;
+    border-color:#30405b;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:1100px){
 
@@ -658,17 +893,22 @@ footer{
     .lower{
         grid-template-columns:1fr;
     }
+
+    .training-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
+
 
 @media(max-width:768px){
 
     .sidebar{
         transform:translateX(-100%);
-        transition:.3s;
     }
 
     .sidebar.open{
         transform:translateX(0);
+        box-shadow:10px 0 30px rgba(0,0,0,.25);
     }
 
     .main{
@@ -678,6 +918,7 @@ footer{
     .topbar{
         height:65px;
         padding:0 15px;
+        gap:12px;
     }
 
     .mobile-menu{
@@ -699,6 +940,10 @@ footer{
         padding:20px 12px;
     }
 
+    .welcome{
+        display:block;
+    }
+
     .welcome h2{
         font-size:22px;
     }
@@ -718,10 +963,6 @@ footer{
         height:50px;
     }
 
-    .extra-grid{
-        grid-template-columns:1fr;
-    }
-
     .recent{
         grid-template-columns:repeat(2,1fr);
     }
@@ -733,7 +974,20 @@ footer{
     .bottom-stat{
         border-bottom:1px solid #e7ebf1;
     }
+
+    .training-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
 }
+
 
 @media(max-width:430px){
 
@@ -760,285 +1014,180 @@ footer{
     .tool p{
         font-size:10px;
     }
+
+    .bottom-stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .notification{
+        font-size:19px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= SIDEBAR ================= -->
+
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
 
 <aside class="sidebar" id="sidebar">
 
     <div class="logo">
+
         <div class="logo-icon">🧵</div>
+
         <div>
             <h1>EMBROIDERY</h1>
             <span>DESIGN ASSISTANT</span>
         </div>
+
     </div>
+
 
     <div class="menu">
 
-        <div class="menu-item active" onclick="openTool('Dashboard')">
+        <div class="menu-item active"
+             onclick="openTool('Dashboard')">
             <span class="menu-icon">🏠</span>
             Dashboard
         </div>
 
-        <div class="menu-item" onclick="openTool('Artwork Analyzer')">
+
+        <div class="menu-item"
+             onclick="openTool('Artwork Analyzer')">
             <span class="menu-icon">◉</span>
             Artwork Analyzer
         </div>
 
-        <div class="menu-item" onclick="openTool('Size Calculator')">
+
+        <div class="menu-item"
+             onclick="openTool('Size Calculator')">
             <span class="menu-icon">⌗</span>
             Size Calculator
         </div>
 
-        <div class="menu-item" onclick="openTool('Embroidery Calculator')">
+
+        <div class="menu-item"
+             onclick="openTool('Embroidery Calculator')">
             <span class="menu-icon">▦</span>
             Embroidery Calculator
         </div>
 
-        <div class="menu-item" onclick="openTool('File Analyzer')">
+
+        <div class="menu-item"
+             onclick="openTool('File Analyzer')">
             <span class="menu-icon">📄</span>
             File Analyzer
         </div>
 
-        <div class="menu-item" onclick="openTool('Production Sheet')">
+
+        <div class="menu-item"
+             onclick="openTool('Production Sheet')">
             <span class="menu-icon">▤</span>
             Production Sheet
         </div>
 
-        <div class="menu-item" onclick="openTool('Sequin & Beads')">
+
+        <div class="menu-item"
+             onclick="openTool('Sequin & Beads')">
             <span class="menu-icon">◉</span>
             Sequin & Beads Calculator
         </div>
 
-        <div class="menu-item" onclick="openTool('Embroidery Effect')">
+
+        <div class="menu-item"
+             onclick="openTool('Embroidery Effect')">
             <span class="menu-icon">◌</span>
             Embroidery Effect Generator
         </div>
 
-        <div class="menu-item" onclick="openTool('Pattern Generator')">
+
+        <div class="menu-item"
+             onclick="openTool('Pattern Generator')">
             <span class="menu-icon">✦</span>
             Pattern / Mark Generator
         </div>
 
-        <div class="menu-item" onclick="openTool('Design Catalog')">
+
+        <div class="menu-item"
+             onclick="openTool('Design Catalog')">
             <span class="menu-icon">▣</span>
             Design Catalog
         </div>
 
-        <div class="menu-item" onclick="openTool('All-in-One Tools')">
-            <span class="menu-icon">▤</span>
+
+        <div class="menu-item"
+             onclick="openTool('All-in-One Tools')">
+            <span class="menu-icon">🧰</span>
             All-in-One Tools
         </div>
 
-        <div class="menu-item" onclick="openTool('AI Design Assistant')">
+
+        <div class="menu-item"
+             onclick="openTool('AI Design Assistant')">
+
             <span class="menu-icon">✦</span>
+
             AI Design Assistant
+
             <span class="ai-badge">AI</span>
+
         </div>
 
-        <div class="menu-title">Learning</div>
 
-        <div class="menu-item" onclick="openTraining()">
+        <div class="menu-title">
+            Learning
+        </div>
+
+
+        <div class="menu-item"
+             onclick="scrollToSection('training')">
+
             <span class="menu-icon">🎓</span>
+
             Embroidery Training
+
         </div>
 
-        <div class="menu-title">Other</div>
 
-        <div class="menu-item" onclick="openTool('Templates')">
+        <div class="menu-title">
+            Other
+        </div>
+
+
+        <div class="menu-item"
+             onclick="openTool('Templates')">
+
             <span class="menu-icon">▣</span>
+
             Templates
+
         </div>
 
-        <div class="menu-item" onclick="openTool('Help & Tutorial')">
+
+        <div class="menu-item"
+             onclick="openTool('Help & Tutorial')">
+
             <span class="menu-icon">?</span>
+
             Help & Tutorial
+
         </div>
 
-        <div class="menu-item" onclick="openTool('Settings')">
+
+        <div class="menu-item"
+             onclick="openTool('Settings')">
+
             <span class="menu-icon">⚙</span>
+
             Settings
+
         </div>
 
-        <div class="menu-item" onclick="openTool('Profile')">
-            <span class="menu-icon">♙</span>
-            Profile
-        </div>
 
-        <div class="menu-item" onclick="openContact()">
-            <span class="menu-icon">📞</span>
-            Contact
-        </div>
-
-    </div>
-
-    <div class="dark-toggle" onclick="toggleDarkMode()">
-        <span>🌙 Dark Mode</span>
-        <div class="switch">
-            <div class="switch-dot"></div>
-        </div>
-    </div>
-
-</aside>
-
-
-<!-- ================= MAIN ================= -->
-
-<main class="main">
-
-<header class="topbar">
-
-    <div class="mobile-menu" onclick="toggleSidebar()">☰</div>
-
-    <div class="search">
-        🔍
-        <input id="searchInput" type="text" placeholder="Search anything..."
-               onkeyup="searchTools()">
-    </div>
-
-    <div class="top-spacer"></div>
-
-    <div class="notification" onclick="showMessage('No new notifications')">🔔</div>
-
-    <div class="language">🌐 English⌄</div>
-
-    <div class="profile">
-        <div class="avatar">👨‍💻</div>
-        <div>
-            <div class="profile-name">Robin Sarker</div>
-            <div class="profile-role">Designer</div>
-        </div>
-    </div>
-
-</header>
-
-
-<section class="content">
-
-<!-- ================= WELCOME ================= -->
-
-<div class="welcome">
-
-    <div>
-        <h2>Welcome back, Robin Sarker! 👋</h2>
-        <p>Everything you need for professional embroidery design.</p>
-    </div>
-
-    <div class="stats">
-
-        <div class="stat">
-            <div class="stat-icon">🧵</div>
-            <div>
-                <div class="stat-label">Total Designs</div>
-                <div class="stat-number">1,248</div>
-                <span class="green">↑ 12 This month</span>
-            </div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-icon">✂</div>
-            <div>
-                <div class="stat-label">Total Stitches</div>
-                <div class="stat-number">12.45 M</div>
-                <span class="green">↑ 8.5% This month</span>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= ORIGINAL 10 TOOLS ================= -->
-
-<div class="tools-container">
-
-<div class="tools">
-
-    <div class="tool" onclick="openTool('Artwork Analyzer')">
-        <div class="tool-icon">🖼</div>
-        <h3>1. Artwork Analyzer</h3>
-        <p>Upload artwork and get detailed analysis for embroidery.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('Size Calculator')">
-        <div class="tool-icon">📐</div>
-        <h3>2. Size Calculator</h3>
-        <p>Calculate design size in mm, cm, inch, pixel and DPI.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('Embroidery Calculator')">
-        <div class="tool-icon">▦</div>
-        <h3>3. Embroidery Calculator</h3>
-        <p>Calculate stitch count, density, spacing and thread consumption.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('File Analyzer')">
-        <div class="tool-icon">DST</div>
-        <h3>4. File Analyzer</h3>
-        <p>Get information from DST, DHP, EMB and other embroidery files.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('Production Sheet')">
-        <div class="tool-icon">📄</div>
-        <h3>5. Production Sheet</h3>
-        <p>Generate professional production sheet and export as PDF.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('Sequin & Beads')">
-        <div class="tool-icon">●</div>
-        <h3>6. Sequin & Beads</h3>
-        <p>Calculate sequin and beads count, spacing and consumption.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('Embroidery Effect')">
-        <div class="tool-icon">🧵</div>
-        <h3>7. Embroidery Effect</h3>
-        <p>Generate realistic embroidery preview from artwork.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('Pattern Generator')">
-        <div class="tool-icon">▦</div>
-        <h3>8. Pattern / Mark Generator</h3>
-        <p>Create pattern, marks, offset, repeat and alignment automatically.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('Design Catalog')">
-        <div class="tool-icon">📁</div>
-        <h3>9. Design Catalog</h3>
-        <p>Organize, manage and search all your embroidery designs.</p>
-    </div>
-
-    <div class="tool" onclick="openTool('All-in-One Tools')">
-        <div class="tool-icon">🧰</div>
-        <h3>10. All-in-One Tools</h3>
-        <p>Various helpful tools for embroidery designers.</p>
-    </div>
-
-</div>
-</div>
-
-
-<!-- ================= TRAINING + CONTACT ================= -->
-
-<div class="extra-grid">
-
-    <div class="extra-card" onclick="openTraining()">
-        <div class="extra-icon training-icon">🎓</div>
-        <h3>Embroidery Training</h3>
-        <p>
-            Learn embroidery design from Basic to Advanced level,
-            including Wilcom, stitch techniques, Sequin, Beads and production.
-        </p>
-    </div>
-
-    <div class="extra-card" onclick="openContact()">
-        <div class="extra-icon contact-icon">📞</div>
-        <h3>Contact</h3>
-        <p>
-            Contact us for embroidery design s
+        <div class="menu-i
