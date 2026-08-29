@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="Professional Embroidery Design Assistant">
+
 <title>Embroidery Design Assistant</title>
 
 <style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
 *{
     margin:0;
     padding:0;
@@ -19,7 +26,14 @@ body{
     color:#101b3d;
 }
 
-/* ================= SIDEBAR ================= */
+button{
+    font-family:inherit;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
 
 .sidebar{
     position:fixed;
@@ -133,14 +147,20 @@ body{
     border-radius:50%;
 }
 
-/* ================= MAIN ================= */
+
+/* =====================================================
+   MAIN
+===================================================== */
 
 .main{
     margin-left:275px;
     min-height:100vh;
 }
 
-/* TOP BAR */
+
+/* =====================================================
+   TOP BAR
+===================================================== */
 
 .topbar{
     height:80px;
@@ -219,7 +239,10 @@ body{
     color:#71809b;
 }
 
-/* CONTENT */
+
+/* =====================================================
+   CONTENT
+===================================================== */
 
 .content{
     padding:28px 38px;
@@ -288,7 +311,10 @@ body{
     font-size:12px;
 }
 
-/* TOOL GRID */
+
+/* =====================================================
+   TOOLS
+===================================================== */
 
 .tools-container{
     background:white;
@@ -365,7 +391,103 @@ body{
     line-height:1.5;
 }
 
-/* LOWER SECTION */
+
+/* =====================================================
+   EMBROIDERY TRAINING
+===================================================== */
+
+.training-section{
+    margin-top:25px;
+    background:white;
+    border:1px solid #e5eaf2;
+    border-radius:16px;
+    padding:22px;
+}
+
+.training-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.training-header-icon{
+    width:58px;
+    height:58px;
+    background:#7045e8;
+    color:white;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+.training-header h2{
+    font-size:23px;
+    margin-bottom:5px;
+}
+
+.training-header p{
+    color:#68758d;
+    font-size:13px;
+}
+
+.training-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.training-card{
+    padding:20px;
+    border-radius:14px;
+    border:1px solid #e5eaf2;
+    background:#f9faff;
+    transition:.25s;
+}
+
+.training-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(30,50,90,.10);
+}
+
+.training-card-icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.training-card h3{
+    font-size:16px;
+    margin-bottom:7px;
+}
+
+.training-card p{
+    color:#68758d;
+    font-size:12px;
+    line-height:1.6;
+    min-height:40px;
+}
+
+.training-button{
+    margin-top:13px;
+    border:0;
+    background:#172a4d;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.training-button:hover{
+    background:#286fe0;
+}
+
+
+/* =====================================================
+   AI + RECENT
+===================================================== */
 
 .lower{
     display:grid;
@@ -427,8 +549,6 @@ body{
     cursor:pointer;
 }
 
-/* RECENT DESIGNS */
-
 .recent{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -464,7 +584,10 @@ body{
     margin-top:5px;
 }
 
-/* BOTTOM STATS */
+
+/* =====================================================
+   BOTTOM STATS
+===================================================== */
 
 .bottom-stats{
     margin-top:18px;
@@ -494,7 +617,79 @@ body{
     margin-top:5px;
 }
 
-/* FOOTER */
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section{
+    margin-top:25px;
+    background:#061a35;
+    color:white;
+    border-radius:16px;
+    padding:28px;
+}
+
+.contact-header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.contact-header h2{
+    font-size:23px;
+    margin-bottom:7px;
+}
+
+.contact-header p{
+    color:#aab8ce;
+    font-size:13px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.contact-card{
+    background:#102d52;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:13px;
+    padding:20px;
+    text-align:center;
+}
+
+.contact-card-icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.contact-card h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.contact-card p{
+    color:#b5c2d5;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.contact-button{
+    display:inline-block;
+    margin-top:10px;
+    background:#2581ee;
+    color:white;
+    border:0;
+    padding:9px 15px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
     text-align:center;
@@ -503,7 +698,10 @@ footer{
     font-size:12px;
 }
 
-/* MODAL */
+
+/* =====================================================
+   MODAL
+===================================================== */
 
 .modal{
     position:fixed;
@@ -518,8 +716,10 @@ footer{
 
 .modal-box{
     background:white;
-    width:500px;
+    width:550px;
     max-width:100%;
+    max-height:90vh;
+    overflow-y:auto;
     border-radius:18px;
     padding:25px;
 }
@@ -556,7 +756,16 @@ footer{
     cursor:pointer;
 }
 
-/* ================= MOBILE ================= */
+.lesson-list{
+    padding-left:20px;
+    line-height:2;
+    color:#59667e;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:1100px){
 
@@ -571,7 +780,12 @@ footer{
     .lower{
         grid-template-columns:1fr;
     }
+
+    .training-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
+
 
 @media(max-width:768px){
 
@@ -642,7 +856,16 @@ footer{
     .bottom-stat{
         border-bottom:1px solid #e7ebf1;
     }
+
+    .training-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 }
+
 
 @media(max-width:430px){
 
@@ -669,27 +892,45 @@ footer{
     .tool p{
         font-size:10px;
     }
+
+    .training-section{
+        padding:15px;
+    }
+
+    .training-header h2{
+        font-size:19px;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= SIDEBAR ================= -->
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
 
 <aside class="sidebar" id="sidebar">
 
     <div class="logo">
+
         <div class="logo-icon">🧵</div>
+
         <div>
             <h1>EMBROIDERY</h1>
             <span>DESIGN ASSISTANT</span>
         </div>
+
     </div>
+
 
     <div class="menu">
 
-        <div class="menu-item active" onclick="openTool('Dashboard')">
+        <div class="menu-item active" onclick="goHome()">
             <span class="menu-icon">🏠</span>
             Dashboard
         </div>
@@ -750,7 +991,18 @@ footer{
             <span class="ai-badge">AI</span>
         </div>
 
+
+        <div class="menu-title">Learning</div>
+
+
+        <div class="menu-item" onclick="scrollToTraining()">
+            <span class="menu-icon">🎓</span>
+            Embroidery Training
+        </div>
+
+
         <div class="menu-title">Other</div>
+
 
         <div class="menu-item" onclick="openTool('Templates')">
             <span class="menu-icon">▣</span>
@@ -772,209 +1024,149 @@ footer{
             Profile
         </div>
 
+
+        <div class="menu-item" onclick="scrollToContact()">
+            <span class="menu-icon">📞</span>
+            Contact
+        </div>
+
     </div>
 
+
     <div class="dark-toggle">
+
         <span>🌙 Dark Mode</span>
+
         <div class="switch">
             <div class="switch-dot"></div>
         </div>
+
     </div>
 
 </aside>
 
 
-<!-- ================= MAIN ================= -->
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main class="main">
 
-    <header class="topbar">
 
-        <div class="mobile-menu" onclick="toggleSidebar()">☰</div>
+<!-- TOPBAR -->
 
-        <div class="search">
-            🔍
-            <input type="text" placeholder="Search anything...">
+<header class="topbar">
+
+    <div class="mobile-menu" onclick="toggleSidebar()">☰</div>
+
+    <div class="search">
+
+        🔍
+
+        <input
+            type="text"
+            placeholder="Search anything..."
+            id="searchInput"
+            onkeyup="searchTools()"
+        >
+
+    </div>
+
+
+    <div class="top-spacer"></div>
+
+
+    <div class="notification">
+        🔔
+    </div>
+
+
+    <div class="language">
+        🌐 English⌄
+    </div>
+
+
+    <div class="profile">
+
+        <div class="avatar">
+            👨‍💻
         </div>
 
-        <div class="top-spacer"></div>
+        <div>
 
-        <div class="notification">🔔</div>
+            <div class="profile-name">
+                Robin Sarker
+            </div>
 
-        <div class="language">🌐 English⌄</div>
+            <div class="profile-role">
+                Designer
+            </div>
 
-        <div class="profile">
-            <div class="avatar">👨‍💻</div>
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<section class="content" id="home">
+
+
+<!-- =====================================================
+     WELCOME
+===================================================== -->
+
+<div class="welcome">
+
+    <div>
+
+        <h2>
+            Welcome back, Robin Sarker! 👋
+        </h2>
+
+        <p>
+            Everything you need for professional embroidery design.
+        </p>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                🧵
+            </div>
+
             <div>
-                <div class="profile-name">Robin Sarker</div>
-                <div class="profile-role">Designer</div>
+
+                <div class="stat-label">
+                    Total Designs
+                </div>
+
+                <div class="stat-number">
+                    1,248
+                </div>
+
+                <span class="green">
+                    ↑ 12 This month
+                </span>
+
             </div>
+
         </div>
 
-    </header>
 
+        <div class="stat">
 
-    <section class="content">
-
-        <!-- WELCOME -->
-
-        <div class="welcome">
+            <div class="stat-icon">
+                ✂
+            </div>
 
             <div>
-                <h2>Welcome back, Robin Sarker! 👋</h2>
-                <p>Everything you need for professional embroidery design.</p>
-            </div>
 
-            <div class="stats">
-
-                <div class="stat">
-                    <div class="stat-icon">🧵</div>
-                    <div>
-                        <div class="stat-label">Total Designs</div>
-                        <div class="stat-number">1,248</div>
-                        <span class="green">↑ 12 This month</span>
-                    </div>
-                </div>
-
-                <div class="stat">
-                    <div class="stat-icon">✂</div>
-                    <div>
-                        <div class="stat-label">Total Stitches</div>
-                        <div class="stat-number">12.45 M</div>
-                        <span class="green">↑ 8.5% This month</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- TOOLS -->
-
-        <div class="tools-container">
-
-            <div class="tools">
-
-                <div class="tool" onclick="openTool('Artwork Analyzer')">
-                    <div class="tool-icon">🖼</div>
-                    <h3>1. Artwork Analyzer</h3>
-                    <p>Upload artwork and get detailed analysis for embroidery.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('Size Calculator')">
-                    <div class="tool-icon">📐</div>
-                    <h3>2. Size Calculator</h3>
-                    <p>Calculate design size in mm, cm, inch, pixel and DPI.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('Embroidery Calculator')">
-                    <div class="tool-icon">▦</div>
-                    <h3>3. Embroidery Calculator</h3>
-                    <p>Calculate stitch count, density, spacing and thread consumption.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('File Analyzer')">
-                    <div class="tool-icon">DST</div>
-                    <h3>4. File Analyzer</h3>
-                    <p>Get information from DST, DHP, EMB and other embroidery files.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('Production Sheet')">
-                    <div class="tool-icon">📄</div>
-                    <h3>5. Production Sheet</h3>
-                    <p>Generate professional production sheet and export as PDF.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('Sequin & Beads')">
-                    <div class="tool-icon">●</div>
-                    <h3>6. Sequin & Beads</h3>
-                    <p>Calculate sequin and beads count, spacing and consumption.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('Embroidery Effect')">
-                    <div class="tool-icon">🧵</div>
-                    <h3>7. Embroidery Effect</h3>
-                    <p>Generate realistic embroidery preview from artwork.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('Pattern Generator')">
-                    <div class="tool-icon">▦</div>
-                    <h3>8. Pattern / Mark Generator</h3>
-                    <p>Create pattern, marks, offset, repeat and alignment automatically.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('Design Catalog')">
-                    <div class="tool-icon">📁</div>
-                    <h3>9. Design Catalog</h3>
-                    <p>Organize, manage and search all your embroidery designs.</p>
-                </div>
-
-                <div class="tool" onclick="openTool('All-in-One Tools')">
-                    <div class="tool-icon">🧰</div>
-                    <h3>10. All-in-One Tools</h3>
-                    <p>Various helpful tools for embroidery designers.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- LOWER -->
-
-        <div class="lower">
-
-            <!-- AI -->
-
-            <div class="panel">
-
-                <div class="panel-title">🤖 Quick Design Assistant (AI) ✨</div>
-
-                <p style="color:#6c7890;font-size:13px;margin-bottom:12px;">
-                    Ask anything about embroidery design...
-                </p>
-
-                <div class="ai-input">
-                    <input id="aiQuestion" placeholder="Example: Best stitch type for small text?">
-                    <button class="ai-button" onclick="askAI()">➤</button>
-                </div>
-
-                <div class="quick-buttons">
-                    <div class="quick" onclick="setQuestion('Suggest embroidery technique')">
-                        Suggest Technique
-                    </div>
-
-                    <div class="quick" onclick="setQuestion('How can I reduce stitch count?')">
-                        Reduce Stitch Count
-                    </div>
-
-                    <div class="quick" onclick="setQuestion('Fix embroidery density')">
-                        Fix Density
-                    </div>
-
-                    <div class="quick" onclick="setQuestion('Suggest thread colors')">
-                        Color Sequence
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- RECENT DESIGNS -->
-
-            <div class="panel">
-
-                <div class="panel-title">
-                    Recent Designs
-                </div>
-
-                <div class="recent">
-
-                    <div class="design-card">
-                        <div class="design-preview">🌹</div>
-                        <div class="design-info">
-                            <h4>Rose_Design.dst</h4>
-                            <p>125 × 83 mm</p>
-                            <p>24,500 stitches</p>
-            
+                <div class="stat-label">
+     
